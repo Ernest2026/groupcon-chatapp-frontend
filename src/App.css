@@ -1,0 +1,319 @@
+:root {
+  --rec-width: 15%;
+  --audio-width: 53%;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.hide {
+  display: none !important;
+}
+
+.bg-pattern {
+  background: url(../public/images/bg-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.bg-blue-a {
+  background-color: #dff6ff !important;
+}
+
+.bg-blue-b {
+  background-color: #5d8bf4 !important;
+}
+
+.bg-blue-c {
+  background-color: #2d31fa !important;
+}
+
+.bg-blue-d {
+  background-color: #0609e0 !important;
+}
+
+.text-blue-a {
+  color: #dff6ff !important;
+}
+
+.text-blue-b {
+  color: #5d8bf4 !important;
+}
+
+.text-blue-c {
+  color: #2d31fa !important;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.container {
+  width: 90%;
+  height: 553px;
+  position: relative;
+}
+
+.container .box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.8s;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.container .box {
+  transform: rotateY(180deg);
+}
+
+.container .flip {
+  transform: rotateY(180deg) !important;
+}
+
+.container .unflip {
+  transform: rotateY(0deg) !important;
+}
+
+.container .default {
+  transform: rotateY(0deg);
+}
+
+.msg div {
+  max-width: 80%;
+}
+
+.msg * {
+  margin: 0;
+  padding: 0;
+}
+
+.msg-box {
+  min-width: 250px;
+}
+
+.mg-06 {
+  margin: 0 6rem;
+}
+
+.mgy {
+  margin: 0 0.5rem;
+}
+
+.mg-60 {
+  padding: 6rem 0;
+}
+
+.mg-20 {
+  padding-bottom: 2rem;
+}
+
+.bd {
+  border: 1px solid red;
+}
+
+.user:hover {
+  background-color: hsl(222, 87%, 56%);
+}
+
+.message-input {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  left: 0;
+}
+
+.message-button {
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  right: 0;
+}
+
+.trans {
+  display: block;
+}
+
+.trans-text {
+  font-size: 0.875rem;
+}
+
+.home-txt {
+  text-align: center;
+}
+
+.illustration-img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (min-width: 567px) and (max-width: 991px) {
+  .illustration-img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-sm-collapse {
+    position: fixed;
+    top: 13vh;
+    left: 0;
+    width: 80%;
+    height: 74vh !important;
+  }
+  .navbar-sm-collapse.slidein {
+    left: -80% !important;
+    transition: left 300ms ease-in-out;
+  }
+
+  .navbar-sm-collapse.slideout {
+    left: 0 !important;
+    transition: left 300ms ease-in-out;
+  }
+
+  .audio-rec {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .home-txt {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --rec-width: 8%;
+    --audio-width: 250px;
+  }
+
+  .mg-md-01 {
+    margin: 0 1rem;
+  }
+
+  .mg-md-60 {
+    margin: 6rem 0;
+  }
+
+  .pd-md-5 {
+    padding-left: 5%;
+  }
+  .container {
+    width: 500px;
+    height: 553px;
+    position: relative;
+  }
+  .message-input {
+    width: 92%;
+  }
+
+  .message-button {
+    width: 8%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mg-lg-06 {
+    margin: 0 6rem;
+  }
+}
+
+[class^="rec"] {
+  outline: none;
+  border: none;
+}
+
+.audio-react-recorder__canvas,
+.rec-div {
+  position: absolute;
+  height: 100%;
+  width: var(--audio-width);
+  right: calc(var(--rec-width) + 2% + var(--rec-width));
+  top: 0;
+  z-index: 9;
+  display: none;
+}
+
+.rec-div {
+  width: calc(var(--audio-width) + var(--rec-width));
+  right: calc(var(--rec-width) + 2%);
+  z-index: 8;
+}
+
+.rec-start {
+  position: absolute;
+  width: var(--rec-width);
+  height: 100%;
+  right: 0;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  z-index: 9;
+}
+
+.rec-pause {
+  position: absolute;
+  color: blue;
+  right: calc(2% + var(--rec-width) + var(--rec-width) + var(--audio-width));
+  height: 100%;
+  width: var(--rec-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  z-index: 9;
+}
+
+.rec-stop {
+  position: absolute;
+  width: var(--rec-width);
+  height: 100%;
+  right: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  z-index: 9;
+}
+
+.rec-clear {
+  position: absolute;
+  width: var(--rec-width);
+  height: 100%;
+  right: calc(2% + var(--rec-width) + var(--rec-width) + var(--audio-width));
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  z-index: 8;
+}
+
+.rec-file {
+  height: 100%;
+  width: 100%;
+}
+
+.rec-r-10 {
+  right: calc(var(--rec-width) + 2%) !important;
+}
+
+.rec-hide {
+  display: none;
+}
+
+.vsb-hdn {
+  visibility: hidden;
+}
