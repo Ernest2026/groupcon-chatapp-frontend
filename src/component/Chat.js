@@ -235,7 +235,14 @@ const Chat = (props) => {
             Room Name
           </h4>
           <div className="bg-primary">
-            <h5 className="px-3 py-2 text-light">{d4 && d4.getGroup.name}</h5>
+            <h5 className="px-3 py-2 text-light">
+              {d4 && d4.getGroup.name}
+              <br />
+              <small>
+                <b>ID: </b>
+                {d4 && d4.getGroup.id}
+              </small>
+            </h5>
           </div>
           <h4>
             <Users />

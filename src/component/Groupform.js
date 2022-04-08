@@ -141,6 +141,16 @@ const Groupform = () => {
           flip === "creategroup" && "flip"
         } ${unflip === "creategroup" && "unflip"}`}
       >
+        {e1 && (
+          <div className="alert alert-danger alert-dismissible">
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="alert"
+            ></button>
+            <strong>Error!</strong> {e1.message}
+          </div>
+        )}
         <h2 className="text-center text-light">Create a new Group</h2>
         <form action="/action_page.php" id="creategroup">
           <div className="form-floating mb-3 mt-3">

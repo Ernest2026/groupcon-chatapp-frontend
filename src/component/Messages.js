@@ -86,12 +86,20 @@ const Messages = () => {
 
   return (
     <>
-      <div className="d-flex justify-content-center">
-        <button className="btn btn-sm btn-primary" onClick={handleClick}>
-          Refresh{" "}
-          {l1 && <span className="spinner-border spinner-border-sm"></span>}
-        </button>
-      </div>
+      {messages.length >= 1 ? (
+        <div className="d-flex justify-content-center w-100">
+          <button className="btn btn-sm btn-primary" onClick={handleClick}>
+            Refresh{" "}
+            {l1 && <span className="spinner-border spinner-border-sm"></span>}
+          </button>
+        </div>
+      ) : (
+        <div className="d-flex justify-content-center w-100">
+          <div className="float-end bg-primary p-2 rounded msg-box">
+            <p className="text-light m-0">Be the first to send a message</p>
+          </div>
+        </div>
+      )}
       {messages.map((msg) => {
         return (
           <div
