@@ -6,7 +6,6 @@ import {
   InMemoryCache,
   ApolloProvider,
   split,
-  HttpLink,
 } from "@apollo/client";
 import { createUploadLink } from "apollo-upload-client";
 import { BrowserRouter } from "react-router-dom";

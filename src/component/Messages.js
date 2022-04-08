@@ -33,14 +33,17 @@ const Messages = () => {
     document.getElementById("msg-div").scrollTo(0, x);
   };
 
-  const [GetMessages, { loading: l1, error: e1 }] = useLazyQuery(getMessages, {
-    variables: { ...msgCount, groupId: groupId },
-    onCompleted(data) {
-      const scrHeight = document.getElementById("msg-div").scrollHeight;
-      setMessages((msg) => [...data.getMessages, ...msg]);
-      scrollBot(document.getElementById("msg-div").scrollHeight - scrHeight);
-    },
-  });
+  const [GetMessages, { data: d1, loading: l1, error: e1 }] = useLazyQuery(
+    getMessages,
+    {
+      variables: { ...msgCount, groupId: groupId },
+      onCompleted(data) {
+        const scrHeight = document.getElementById("msg-div").scrollHeight;
+        setMessages((msg) => [...data.getMessages, ...msg]);
+        scrollBot(document.getElementById("msg-div").scrollHeight - scrHeight);
+      },
+    }
+  );
 
   useSubscription(msgSubscription, {
     onSubscriptionData({ subscriptionData: { data } }) {
@@ -86,18 +89,12 @@ const Messages = () => {
 
   return (
     <>
-      {messages.length >= 1 ? (
+      {messages.length >= 1 && (
         <div className="d-flex justify-content-center w-100">
           <button className="btn btn-sm btn-primary" onClick={handleClick}>
             Refresh{" "}
             {l1 && <span className="spinner-border spinner-border-sm"></span>}
           </button>
-        </div>
-      ) : (
-        <div className="d-flex justify-content-center w-100">
-          <div className="float-end bg-primary p-2 rounded msg-box">
-            <p className="text-light m-0">Be the first to send a message</p>
-          </div>
         </div>
       )}
       {messages.map((msg) => {

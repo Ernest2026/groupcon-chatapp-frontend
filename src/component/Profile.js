@@ -100,7 +100,7 @@ const Profile = ({ user, show, hide }) => {
                 src={
                   userProfile && userProfile.image
                     ? `https://groupconbackend.herokuapp.com${userProfile.image}`
-                    : "/images/avatar.jpg"
+                    : "/images/avatar.png"
                 }
               />
               {userProfile.id === localStorage.userId && (

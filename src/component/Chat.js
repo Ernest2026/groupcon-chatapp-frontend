@@ -290,6 +290,7 @@ const Chat = (props) => {
               position: "absolute",
               top: 0,
               overflowY: "scroll",
+              width: "100%",
             }}
             id="msg-div"
           >
