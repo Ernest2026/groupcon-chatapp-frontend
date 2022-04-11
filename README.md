@@ -22,7 +22,7 @@ Functionalities I hope to implement in the future are:
 
 ## How to download and run this project
 
-- First of all download the [groupcon backend source code](https://github.com/Ernest2026/groupcon-chatapp-backend/tree/main) and start up your server.
+- First of all download the [groupcon backend source code](https://github.com/Ernest2026/groupcon-chatapp-backend/) and start up your server.
 - Change the links in the build file in the middleware folder, to your localhost link if needed.
 - Now grab a cup of coffee, sit back and run _npm start_ on the terminal.
 
