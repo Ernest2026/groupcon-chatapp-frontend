@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Groupcon chatapp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project main purpose
 
-## Available Scripts
+This is a web application specially designed for group conversations...
 
-In the project directory, you can run:
+## Project description
 
-### `npm start`
+This web app have different interesting functionality. Here are some major functionality:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Sending messages in real time.
+- Sending audio, and transcribed audio text in real time.
+- Viewing users profile and editing profile.
+- Leave group and closing group.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The client side was designed mainly with Reactjs.
 
-### `npm test`
+Functionalities I hope to implement in the future are:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Google sign in.
+- Compressing images.
 
-### `npm run build`
+## How to download and run this project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- First of all download the [groupcon backend source code](https://github.com/Ernest2026/groupcon-chatapp-backend/tree/main) and start up your server.
+- Change the links in the build file in the middleware folder, to your localhost link if needed.
+- Now grab a cup of coffee, sit back and run _npm start_ on the terminal.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Appreciations
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I'd love to show my appreciation to [Deepgram api](https://developers.deepgram.com/), for making the voice text transcription in real time successful...

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getMessages } from "../graphql/query";
 import { msgSubscription } from "../graphql/subscription";
+import { httplink } from "../middleware/build";
 
 const Messages = () => {
   const [messages, setMessages] = useState([]);
@@ -120,7 +121,7 @@ const Messages = () => {
               ) : (
                 <>
                   <audio
-                    src={`https://groupconbackend.herokuapp.com${msg.audio}`}
+                    src={`${httplink}${msg.audio}`}
                     controls={true}
                     id={msg.id}
                     onPlay={handlePlay}

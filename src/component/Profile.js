@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { editProfile } from "../graphql/mutation";
 import { getProfile } from "../graphql/query";
+import { httplink } from "../middleware/build";
 import { Arrowleft } from "./Svgs";
 
 const Profile = ({ user, show, hide }) => {
@@ -99,7 +100,7 @@ const Profile = ({ user, show, hide }) => {
                 style={{ borderRadius: "50%", border: "5px solid #2d31fa" }}
                 src={
                   userProfile && userProfile.image
-                    ? `https://groupconbackend.herokuapp.com${userProfile.image}`
+                    ? `${httplink}${userProfile.image}`
                     : "/images/avatar.png"
                 }
               />

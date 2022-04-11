@@ -13,6 +13,7 @@ import { setContext } from "@apollo/client/link/context";
 import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
 import { createClient } from "graphql-ws";
 import { getMainDefinition } from "@apollo/client/utilities";
+import { wslink, httplink } from "./middleware/build";
 
 const authLink = setContext((_, { headers }) => {
   return {
@@ -24,12 +25,12 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const httpLink = new createUploadLink({
-  uri: "https://groupconbackend.herokuapp.com/graphql",
+  uri: `${httplink}/graphql`,
 });
 
 const wsLink = new GraphQLWsLink(
   createClient({
-    url: "wss://groupconbackend.herokuapp.com/graphql",
+    url: `${wslink}/graphql`,
   })
 );
 
